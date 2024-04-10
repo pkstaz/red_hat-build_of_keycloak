@@ -1,0 +1,23 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+  annotations:
+      argocd.argoproj.io/sync-wave: "2"
+  name: keycloak-development
+  labels:
+    app: sso
+  namespace: keycloak
+spec:
+  hostname:
+    hostname: development.keycloak.org
+  instances: 2
+  tlsSecret: keycloak-cert-&-key
+  db:
+    vendor: postgres
+    host: postgres-db
+    usernameSecret:
+      name: keycloak-db-secret
+      key: username
+    passwordSecret:
+      name: keycloak-db-secret
+      key: password

@@ -4,4 +4,5 @@ commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
 - 00_pgsql-db.yaml
-- 01_keycloak-development.yaml
+- 01_secrets.yaml
+- 02_keycloak-development.yaml

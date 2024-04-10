@@ -3,4 +3,4 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
-- 02_rhsso-prod.yaml
+- 02_keycoak-development.yaml
