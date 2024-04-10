@@ -4,7 +4,7 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-  name: keycloak-operator
+  name: keycloak-development
   namespace: openshift-gitops
 spec:
   destination:
