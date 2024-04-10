@@ -4,6 +4,7 @@ metadata:
   annotations:
       argocd.argoproj.io/sync-wave: "3"
   name: keycloak-development
+  namespace: keycloak
 spec:
   instances: 2
   db:
