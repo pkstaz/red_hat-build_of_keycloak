@@ -1,11 +1,12 @@
-kind: Keycloak
 apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
 metadata:
   name: keycloak-development
   labels:
     app: sso
   namespace: keycloak
 spec:
-  hostname: example.org
+  hostname:
+    hostname: keycloak-development
   instances: 1
   tlsSecret: my-tls-secret
