@@ -1,8 +1,6 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  annotations:
-      argocd.argoproj.io/sync-wave: "3"
   name: keycloak-development
   namespace: keycloak
   labels:
@@ -13,6 +11,12 @@ spec:
   to:
     kind: Service
     name: keycloak-development-service
-  tls: null
+  tls:
+    termination: passthrough
+    insecureEdgeTerminationPolicy: None
+    certificate: ''
+    key: ''
+    caCertificate: ''
+    destinationCACertificate: ''
   port:
     targetPort: https
