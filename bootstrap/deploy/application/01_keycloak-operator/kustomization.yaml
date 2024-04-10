@@ -3,4 +3,4 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
-- 00_keycloak-operator
+- 00_keycloak-operator.yaml
