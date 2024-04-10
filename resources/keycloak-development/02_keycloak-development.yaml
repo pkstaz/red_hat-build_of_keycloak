@@ -2,7 +2,7 @@ apiVersion: k8s.keycloak.org/v2alpha1
 kind: Keycloak
 metadata:
   annotations:
-      argocd.argoproj.io/sync-wave: "2"
+      argocd.argoproj.io/sync-wave: "3"
   name: keycloak-development
 spec:
   instances: 2
