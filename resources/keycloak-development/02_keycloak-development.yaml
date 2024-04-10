@@ -11,7 +11,8 @@ spec:
   hostname:
     hostname: development.keycloak.org
   instances: 2
-  tlsSecret: keycloak-cert-&-key
+  http:
+    tlsSecret: keycloak-cert-&-key
   db:
     vendor: postgres
     host: postgres-db
