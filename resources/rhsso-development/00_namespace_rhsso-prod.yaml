@@ -4,6 +4,5 @@ kind: Namespace
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-# now that we deploying using ArgoCD we can specify the order of deploy
-  name: rhsso-dev
+  name: rhsso-prod
 spec: {}

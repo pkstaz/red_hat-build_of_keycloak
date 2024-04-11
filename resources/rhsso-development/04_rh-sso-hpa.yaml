@@ -1,10 +1,10 @@
 kind: HorizontalPodAutoscaler
-apiVersion: autoscaling/v2
+apiVersion: autoscaling/v2beta2
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "4"
-  name: rhsso-dev-hpa
-  namespace: rhsso-dev
+  name: rhsso-prod-hpa
+  namespace: rhsso-prod
 spec:
   scaleTargetRef:
     kind: StatefulSet

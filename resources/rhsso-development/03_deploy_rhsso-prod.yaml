@@ -4,22 +4,19 @@ kind: Keycloak
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "3"
-  name: rhsso-dev
+  name: rhsso-prod
   labels:
-    app: rhsso-dev
-  namespace: rhsso-dev
+    app: rhsso-prod
+  namespace: rhsso-prod
 spec:
-  disableReplicasSyncing: true
-# disable the Replica sync in order to use the HPA for scalling
   multiAvailablityZones:
     enabled: true
-# we add this flag for HA deploy, we need more than 1 pod for this
-  externalAccess:
+  disableReplicasSyncing: true
+  externalDatabase:
     enabled: true
   keycloakDeploymentSpec:
     imagePullPolicy: Always
   postgresDeploymentSpec:
     imagePullPolicy: Always
   instances: 2
-# we set a minimum of 2 pods for the HA
   storageClassName: gp2
