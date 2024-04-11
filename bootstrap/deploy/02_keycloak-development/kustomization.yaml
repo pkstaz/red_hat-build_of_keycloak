@@ -5,3 +5,4 @@ commonAnnotations:
 resources:
 - 01_pgsql-db.yaml
 - 02_keycoak-development.yaml
+- 03_rhsso-development.yaml
