@@ -4,6 +4,8 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
   name: keycloak-db
   namespace: openshift-gitops
 spec:

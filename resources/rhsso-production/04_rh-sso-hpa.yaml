@@ -1,5 +1,5 @@
 kind: HorizontalPodAutoscaler
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscalingv2
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "4"
