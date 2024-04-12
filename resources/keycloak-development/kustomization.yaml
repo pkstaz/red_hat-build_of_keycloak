@@ -3,5 +3,9 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
-- 01_secrets.yaml
-- 02_keycloak-development.yaml
+- 00_keycloak-namespace.yaml
+- 01_keycloak-operatorgroup.yaml
+- 02_keycloak-subscription.yaml
+- 03_pgsql-db.yaml
+- 04_secrets.yaml
+- 05_keycloak-development.yaml
