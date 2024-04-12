@@ -43,16 +43,8 @@ metadata:
   name: postgres-db
   namespace: keycloak
 spec:
-  allocateLoadBalancerNodePorts: true
-  externalTrafficPolicy: Cluster
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-    - IPv4
-  ipFamilyPolicy: SingleStack
   selector:
     app: postgresql-db
-  type: LoadBalancer
-  sessionAffinity: None
   ports:
   - port: 5432
     protocol: TCP
