@@ -9,4 +9,4 @@ resources:
 - 03_pgsql-db.yaml
 - 04_secrets.yaml
 - 05_keycloak-development.yaml
-- 06_keycloak-route.yaml
+# - 06_keycloak-route.yaml
