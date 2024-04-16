@@ -19,4 +19,4 @@ spec:
   postgresDeploymentSpec:
     imagePullPolicy: Always
   instances: 2
-  storageClassName: gp2
+  storageClassName: ocs-external-storagecluster-ceph-rbd
