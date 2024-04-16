@@ -69,21 +69,3 @@ spec:
     - protocol: TCP
       port: 10389
       targetPort: 10389
----
-kind: Route
-apiVersion: route.openshift.io/v1
-metadata:
-  name: openldap
-  namespace: keycloak
-  labels:
-    app.kubernetes.io/instance: keycloak-development
-spec:
-  to:
-    kind: Service
-    name: openldap
-  tls:
-    termination: edge
-    insecureEdgeTerminationPolicy: Allow
-    destinationCACertificate: ''
-  port:
-    targetPort: 10389
