@@ -9,4 +9,4 @@ resources:
 - 02_rh-sso-operator.yaml
 - 03_deploy_rhsso-prod.yaml
 - 04_rh-sso-hpa.yaml
-- 05_rh-sso-route.yaml
+# 05_rh-sso-route.yaml
