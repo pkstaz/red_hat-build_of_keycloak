@@ -12,4 +12,4 @@ spec:
   name: rhsso-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: rhsso-operator.7.6.1-opr-005
+# startingCSV: rhsso-operator.7.6.1-opr-005
