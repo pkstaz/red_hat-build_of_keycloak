@@ -9,14 +9,11 @@ metadata:
     app: rhsso-prod
   namespace: rhsso-prod
 spec:
-  multiAvailablityZones:
+  externalAccess:
     enabled: true
-  disableReplicasSyncing: true
-  externalDatabase:
-    enabled: false
+  instances: 2
   keycloakDeploymentSpec:
     imagePullPolicy: Always
   postgresDeploymentSpec:
     imagePullPolicy: Always
-  instances: 2
   storageClassName: ocs-external-storagecluster-ceph-rbd
