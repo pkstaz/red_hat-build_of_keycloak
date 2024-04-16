@@ -41,14 +41,13 @@ spec:
       labels:
         app: ldap
     spec:
+      serviceAccount: openldap
       containers:
         - name: container
           image: rroemhild/test-openldap
           ports:
             - containerPort: 8080
               protocol: TCP
-          env: []
-      imagePullSecrets: []
   strategy:
     type: RollingUpdate
     rollingUpdate:
