@@ -31,8 +31,7 @@ metadata:
   namespace: keycloak
   name: ldap
 spec:
-  ServiceAccount: openldap
-  serviceAccountName: openldap
+  serviceAccount: openldap
   selector:
     matchLabels:
       app: ldap
