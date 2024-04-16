@@ -54,4 +54,18 @@ spec:
     rollingUpdate:
       maxSurge: 25%
       maxUnavailable: 25%
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+      argocd.argoproj.io/sync-wave: "11"
+  name: openldap
+  namespace: keycloak
+spec:
+  selector:
+    app: ldap
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 10389
