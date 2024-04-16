@@ -13,7 +13,7 @@ spec:
     enabled: true
   disableReplicasSyncing: true
   externalDatabase:
-    enabled: true
+    enabled: false
   keycloakDeploymentSpec:
     imagePullPolicy: Always
   postgresDeploymentSpec:
