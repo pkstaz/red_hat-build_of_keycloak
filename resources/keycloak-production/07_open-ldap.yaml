@@ -4,7 +4,7 @@ apiVersion: project.openshift.io/v1
 metadata:
   annotations:
       argocd.argoproj.io/sync-wave: "8"
-  name: openldap
+  name: openldap-prod
 spec:
   finalizers:
     - kubernetes
@@ -14,8 +14,8 @@ kind: ServiceAccount
 metadata:
   annotations:
       argocd.argoproj.io/sync-wave: "9"
-  name: openldap
-  namespace: openldap
+  name: openldap-prod
+  namespace: openldap-prod
 ---
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
@@ -23,11 +23,11 @@ metadata:
   annotations:
       argocd.argoproj.io/sync-wave: "10"
   name: anyrole
-  namespace: openldap
+  namespace: openldap-prod
 subjects:
   - kind: ServiceAccount
-    name: openldap
-    namespace: openldap
+    name: openldap-prod
+    namespace: openldap-prod
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -38,8 +38,8 @@ kind: Deployment
 metadata:
   annotations:
       argocd.argoproj.io/sync-wave: "11"
-  namespace: openldap
-  name: openldap
+  namespace: openldap-prod
+  name: openldap-prod
 spec:
   serviceAccount: openldap
   selector:
@@ -69,8 +69,8 @@ kind: Service
 metadata:
   annotations:
       argocd.argoproj.io/sync-wave: "12"
-  name: openldap
-  namespace: openldap
+  name: openldap-prod
+  namespace: openldap-prod
 spec:
   selector:
     app: ldap
