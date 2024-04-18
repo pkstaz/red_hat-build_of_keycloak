@@ -20,4 +20,4 @@ spec:
     httpEnabled: true
     tlsSecret: keycloak-tls
   hostname:
-    hostname: keycloak-keycloak.apps.cluster-zvbrv.dynamic.redhatworkshops.io
+    hostname: keycloak-keycloak.apps.cluster-gqh2v.dynamic.redhatworkshops.io
