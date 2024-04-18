@@ -41,7 +41,6 @@ metadata:
   namespace: openldap
   name: openldap
 spec:
-  serviceAccount: openldap
   selector:
     matchLabels:
       app: ldap
