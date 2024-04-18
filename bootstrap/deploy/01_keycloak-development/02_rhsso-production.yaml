@@ -21,9 +21,3 @@ spec:
     targetRevision: HEAD
 # and branch, in this case HEAD / main
   project: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - PruneLast=true
