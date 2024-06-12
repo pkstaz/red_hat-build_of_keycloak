@@ -16,7 +16,7 @@ spec:
   source:
     path: resources/keycloak-development
 # we specify the folder for the files
-    repoURL: 'https://github.com/Everything-is-Code/red_hat-build_of_keycloak'
+    repoURL: 'https://github.com/pkstaz/red_hat-build_of_keycloak'
 # the repository url
     targetRevision: HEAD
 # and branch, in this case HEAD / main
